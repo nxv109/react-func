@@ -1,0 +1,231 @@
+.detail {
+  &__pro {
+    @include display(row, flex-start, space-evenly);
+  }
+
+  &__pro-photos {
+    max-width: 50%;
+    @include display(row, flex-start, space-between);
+    @extend %bdgr;
+  }
+
+  &__list-photos {
+    max-width: 20%;
+    @extend %pl-1;
+    @extend %pr-1;
+    @extend %bdr;
+    @extend %pt-4;
+    @extend %pb-4;
+    @include display(column, center, space-between);
+    position: relative;
+  }
+
+  &__main-photo {
+    max-width: 80%;
+
+    & > div {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 13%);
+      cursor: zoom-in;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__photo {
+    width: 7rem;
+    cursor: pointer;
+
+    &:hover {
+      @extend %ol;
+    }
+
+    &:not(:last-child) {
+      @extend %mb-1;
+      @extend %bdb;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__pro-info {
+    max-width: 50%;
+    @include display(column, flex-start, space-between);
+    min-height: 50rem;
+  }
+
+  &__ar-bottom,
+  &__ar-top {
+    color: $cl-bg-primary;
+    position: absolute;
+  }
+
+  &__ar-top {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__ar-bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__eff--left {
+    text-align: left !important;
+  }
+
+  &__pro-price {
+    font-size: $h1;
+  }
+
+  &__star-checked {
+    color: $cl-bg-primary;
+  }
+
+  &__pro-color-dt {
+    @include display(row, flex-start, center);
+
+    & > div:not(:last-child) {
+      @extend %mr-1;
+    }
+
+    & > div:hover {
+      @extend %ol;
+    }
+
+    & > label:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__cl-red {
+    width: $w-4rem;
+    height: $h-4rem;
+    background: red;
+  }
+
+  &__cl-yellow {
+    width: $w-4rem;
+    height: $h-4rem;
+    background: yellow;
+  }
+
+  &__cl-blue {
+    width: $w-4rem;
+    height: $h-4rem;
+    background: blue;
+  }
+
+  &__pro-select > select {
+    @extend %btn1;
+    border: 1px solid gray;
+    width: 12rem;
+  }
+
+  &__amount > input {
+    @extend %btn1;
+  }
+
+  &__pro-add-to-cart {
+    @extend %btn;
+  }
+
+  &__pro-action {
+    font-size: $fs-small;
+
+    & > span > i:not(:last-child),
+    & > span:not(:last-child) {
+      @extend %mr-1;
+    }
+
+    & > span > i {
+      @extend %mr-1;
+    }
+  }
+
+  &__more-info {
+    padding-top: 1rem;
+    @extend %mt-3;
+    position: relative;
+    @include display(row, flex-start, space-between);
+    min-height: 45rem;
+  }
+
+  &__more-photo {
+    width: 30%;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.tabs {
+  width: 70%;
+  @include display(row, flex-start, flex-start);
+}
+
+.tabs .tab {
+  @extend %mr-1;
+}
+
+.tabs .tab .content {
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 4rem;
+  width: $w-70p;
+  height: $h-100;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.checkboxtab {
+  display: none;
+}
+
+.tab > label {
+  @extend %btn1;
+  cursor: pointer;
+}
+
+.checkboxtab:checked~label {
+  color: $cl-bg-primary;
+  border: 1px #000 solid;
+}
+
+.checkboxtab:checked~.content {
+  z-index: 1;
+}
+// color detail
+input[name="color"] {
+  display: none;
+}
+
+input[name="color"]:checked + label {
+  outline: 2px #f7d496 solid;
+}
+// stars
+label[class^="star"] {
+  cursor: pointer;
+}
+
+.star {
+  color: #dedbdb !important;
+}
+
+.star:hover {
+  background: none;
+}
+
+.checked {
+  color: yellow !important;
+}

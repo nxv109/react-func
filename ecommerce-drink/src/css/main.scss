@@ -1,0 +1,144 @@
+@mixin display($ffl, $align-items, $jus-content) {
+  display: flex;
+  flex-flow: $ffl wrap;
+  align-items: $align-items;
+  justify-content: $jus-content;
+}
+// variables
+@import 'variables'; // global
+@import 'title';
+@import 'breadcrumb'; // extends
+@import 'extend';
+@import 'common';
+@import 'ordersDetails';
+@import 'admin';
+@import 'profile';
+@import 'loading';
+
+.cursor {
+  cursor: pointer;
+}
+
+input[class="border border-white rounded-pill ml-1 p-1"] {
+  border-radius: 10px;
+}
+
+.message {
+  position: fixed;
+  bottom: 5rem;
+  left: 3rem;
+  z-index: 10;
+  background-color: $cl-bg-primary;
+  // @extend %bdrdu;
+  color: #fff;
+  box-shadow: 0 5px 9px 0 #1f1f1f85;
+}
+
+select:hover, input:hover {
+  background: #fff !important;
+}
+
+input{
+  border: 1px solid gray !important;
+}
+
+a {
+  color: $cl-primary;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: $cl-secondary;
+  text-decoration: underline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// title
+
+.main-title-tl {
+  &__tt {
+    font-size: $h1;
+    font-weight: initial;
+    text-align: center;
+  }
+
+  &__eff {
+    text-align: center;
+  }
+}
+// tag
+
+.tag {
+  @extend %btn1;
+  @extend %bdrdu;
+  margin: 0 5px 5px 0;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid $cl-rd;
+
+  &:hover {
+    // background: $cl-bg-primary;
+    color: $cl-black;
+  }
+}
+// form
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  height: 27px;
+  padding: 1rem;
+  background: #fff;
+  outline: none;
+  border: 1px solid #ccccccbf;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'AdobeInvisFont', 'MyriadPro-Regular', 'TimesNewRomanPSMT';
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.main {
+  max-width: 250rem;
+  // min-height: 100vh;
+}
+
+.container {
+  max-width: 114.1rem;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+// menu top
+@import 'menuTop'; // header
+@import 'header'; // main menu
+@import 'menu'; // content
+@import 'content'; // footer
+@import 'footer'; // PAGES
+// detail
+@import 'detail'; // about
+@import 'about'; // blog
+@import 'blog'; // blog detail
+@import 'blogDetail'; // account
+@import 'account'; // contact
+@import 'contact'; // productR
+@import 'productR'; // productC
+@import 'productC'; // cart
+@import 'cart'; // 404 Not Found
+@import '404NotFound'; // popup
+@import 'popup'; // responsive
+@import 'responsive';

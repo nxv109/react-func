@@ -1,0 +1,38 @@
+.box-profile {
+  padding: 5rem;
+  border: 1px solid #d3d3d1;
+
+  &__table {
+    width: 50%;
+    margin: auto;
+
+    & tr td {
+      padding: 2rem;
+      border: none;
+      background: #f8f8f8;
+      @include display(row, center, space-between);
+    }
+  }
+
+  &__node-edit {
+    font-size: 1.4rem;
+    width: 11rem;
+    text-align: center;
+    margin: 3rem auto auto 64.2%;
+  }
+
+  &__node-update {
+    @include display(row, center, flex-start);
+    margin: 3rem auto auto 53.5%;
+    font-size: 1.4rem;
+
+    & > button {
+      width: 11rem;
+    }
+  }
+
+  &__node-back {
+    width: 8rem;
+    text-align: center;
+  }
+}

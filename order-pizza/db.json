@@ -1,0 +1,9 @@
+{
+  "products": [
+    {"id": 1, "title": "pizza 1", "price": 5, "image": "pz1.jpeg", "amount": 0},
+    {"id": 2, "title": "pizza 2", "price": 10, "image": "pz2.jpg", "amount": 0},
+    {"id": 3, "title": "pizza 3", "price": 15, "image": "pz3.jpeg", "amount": 0},
+    {"id": 4, "title": "pizza 4", "price": 20, "image": "pz4.jpg", "amount": 0},
+    {"id": 5, "title": "pizza 5", "price": 25, "image": "pz5.jpg", "amount": 0}
+  ]
+}

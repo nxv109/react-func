@@ -1,0 +1,57 @@
+.navbar-top {
+  height: 3.3rem;
+  background: $cl-rd;
+  line-height: 3.1rem;
+  &__main-navbar {
+    @include display(row, center, space-between);
+
+    &__narvar {
+      @include display(row, center, flex-start);
+
+      &__items {
+        list-style: none;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        & a {
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: $cl-black;
+
+          &:hover {
+            text-decoration: underline;
+            color: #e5ae42;
+          }
+        }
+      }
+    }
+  }
+
+  &__search {
+    color: $cl-black;
+    font-size: 1.2rem;
+
+    &>span {
+      &>input[type='text'] {
+        background: #ffffff00;
+        border: none;
+        outline: none;
+        margin-left: 1rem;
+
+        &:focus {
+          color: $cl-black;
+          font-style: italic;
+          font-weight: lighter;
+        }
+
+        &::placeholder {
+          font-style: italic;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+  }
+}

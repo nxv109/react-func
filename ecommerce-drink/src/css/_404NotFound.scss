@@ -1,0 +1,104 @@
+.main-not-found {
+  min-height: 100vh;
+  @include display(column, center, center);
+}
+
+.not-found {
+  background: $cl-bg-primary;
+  width: 100%;
+  @extend %mb-2;
+
+  &__nf {
+    min-height: 20rem;
+    position: relative;
+  }
+
+  &__t-t1 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 1;
+    transform: translate(-2%, -78%);
+    -webkit-transform: translate(-2%, -78%);
+    -moz-transform: translate(-2%, -78%);
+    -ms-transform: translate(-2%, -78%);
+    -o-transform: translate(-2%, -78%);
+  }
+
+  &__t-t2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-5%, -48%);
+    -webkit-transform: translate(-5%, -48%);
+    -moz-transform: translate(-5%, -48%);
+    -ms-transform: translate(-5%, -48%);
+    -o-transform: translate(-5%, -48%);
+  }
+
+  &__t-t3 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background: $cl-bg-primary;
+    @extend %pr-3;
+    @extend %pl-3;
+    -webkit-transform: translate(90%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+
+  &__t3 {
+    font-size: 2.5rem;
+    font-family: 'Barlow', sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  &__t3-1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__t1 {
+    font-size: 12.2rem;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  &__t2 {
+    font-size: 30rem;
+    color: $cl-white;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 3rem;
+  }
+
+  &__menu {
+    z-index: 1;
+
+    &>ul {
+      @include display(row, center, center);
+
+      &>li:not(:last-child) {
+        @extend %pr-1;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-165%, -60%);
+    -webkit-transform: translate(-165%, -60%);
+    -moz-transform: translate(-165%, -60%);
+    -ms-transform: translate(-165%, -60%);
+    -o-transform: translate(-165%, -60%);
+
+    &>img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,403 @@
+// introduce
+.introduce {
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+
+  &__bg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 30rem;
+  }
+
+  &__bg2 {
+    position: absolute;
+    top: -5rem;
+    right: -20.7rem;
+    z-index: -1;
+    transform: scaleX(-1);
+    max-width: 30rem;
+  }
+
+  &__intro {
+    @include display(column, center, space-around);
+    padding: 3rem 0;
+
+    &__title {
+      text-align: center;
+
+      &__tt {
+        font-size: $h1;
+        font-weight: initial;
+      }
+    }
+
+    &__content {
+      @extend %mt-2;
+      text-align: center;
+      color: $cl-secondary;
+    }
+
+    &__show-more {
+      @extend %mt-2;
+      @extend %btn;
+    }
+  }
+}
+
+// highlight
+.highlight {
+  height: 100rem;
+
+  &__high {
+    // background-image: url('../images/wine-63931_12802-1240x829.jpg');
+    background-position: top;
+    background-size: 100%;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    height: 65rem;
+    position: relative;
+
+    &__pro {
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      padding: 5rem;
+      height: 100%;
+
+      @include display(row, center, space-around);
+
+      &__photo {
+        flex: 60%;
+
+        &>img {
+          width: 100%;
+        }
+      }
+
+      &__info {
+        flex: 40%;
+        height: 100%;
+        @include display(column, flex-start, space-around);
+
+        &__title {
+          &__tt {
+            font-weight: initial;
+          }
+        }
+
+        &__price {
+          font-size: $h1;
+          color: $cl-bg-primary;
+        }
+
+        &__descriptions{
+          color: $cl-secondary;
+        }
+
+        &__add-to-card {
+          @extend %btn;
+        }
+
+        &__time {
+          width: 100%;
+
+          & > table{
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            color: $cl-bg-primary;
+            font-size: $h2;
+
+            & td, tr{
+              border: 1px solid $cl-bg-primary;
+              padding: 2rem;
+
+              & p{
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// new products
+.new-product{
+  @extend %mt-6;
+}
+
+.product{
+
+  &__items:hover a {
+    text-decoration: none !important;
+    color: $cl-primary;
+  }
+
+  &__items:hover .product__add-to-cart {
+    background-color: $cl-bg-primary;
+  }
+
+  &__title-new-product{
+    text-align: center;
+  }
+
+  &__title-tt{
+    font-size: $h1;
+    font-weight: initial;
+  }
+
+  &__pro{
+    @include display(row, center, center);
+    // height: 47rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  input[name="r"]{
+    visibility: hidden;
+    position: absolute;
+  }
+
+  input[name="r1"]{
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__box-pro1, &__box-pro2{
+    @include display(row, center, center);
+    transition: 0.5s;
+  }
+
+  #r1:checked ~ &__box-pro1{
+    opacity: 1;
+  }
+
+  #r1:checked ~ &__box-pro2{
+    opacity: 0;
+  }
+
+  #r2:checked ~ &__box-pro1{
+    opacity: 0;
+  }
+
+  #r2:checked ~ &__box-pro2{
+    opacity: 1;
+  }
+
+  #r3:checked ~ &__box-pro1{
+    opacity: 1;
+  }
+
+  #r3:checked ~ &__box-pro2{
+    opacity: 0;
+  }
+
+  #r4:checked ~ &__box-pro1{
+    opacity: 0;
+  }
+
+  #r4:checked ~ &__box-pro2{
+    opacity: 1;
+  }
+
+  &__sl-arrow-l{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: $h1;
+
+    &:hover, &:focus{
+      color: $cl-bg-primary;
+    }
+  }
+
+  &__sl-arrow-r{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: $h1;
+
+    &:hover{
+      color: $cl-bg-primary;
+    }
+  }
+
+  &__items{
+    flex: 25%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__items:hover &__title{
+    color: $cl-bg-primary;
+  }
+
+  &__photo > img{
+    max-width: 100%;
+  }
+
+  &__price{
+    @extend %mt-1;
+  }
+
+  &__price-sale{
+    color: $cl-bg-primary;
+  }
+
+  &__price-not-sale{
+    color: $cl-secondary;
+  }
+
+  &__add-to-cart{
+    @extend %btn, %mt-1;
+  }
+}
+
+// gallery
+.main-gallery{
+  @extend %mt-6;
+}
+
+.gallery{
+  @include display(row, center, center);
+
+  &__items{
+    width: $w-25p;
+    height: $h-25rem;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    &:hover{
+      border: 2px solid $cl-bg-primary;
+    }
+  }
+}
+
+// others
+.main-others{
+  @extend %mt-6;
+}
+
+.others{
+  @include display(row, flex-start, space-between);
+
+  &__title{
+    text-align: center;
+  }
+
+  &__title-tt{
+    font-size: $h1;
+  }
+
+  &__blog{
+    flex: 68%;
+  }
+
+  &__customer{
+    flex: 28%;
+    @include display(column, center, center);
+    text-align: center;
+  }
+
+  &__customer-kt{
+    @extend %mt-2;
+  }
+
+  &__customer-cus{
+    @include display(column, center, space-between);
+  }
+
+  &__news{
+    @include display(row, flex-start, center);
+    @extend %mt-2;
+  }
+
+  &__news-items{
+    cursor: pointer;
+    flex: 1;
+
+    &:not(:last-child){
+      margin-right: 3rem;
+    }
+  }
+
+  &__read-more{
+    @extend %mt-1;
+    display: block;
+  }
+
+  &__news-time{
+    @extend %m-1;
+    color: $cl-primary;
+  }
+
+  &__news-photo{
+    @extend %mb-2;
+    position: relative;
+  }
+
+  &__news-photo > img{
+    width: 100%;
+  }
+
+  &__news-descriptions{
+    color: $cl-secondary;
+  }
+
+  &__customer-descriptions{
+    @extend %m-2;
+    color: $cl-secondary;
+  }
+
+  &__customer-position{
+    color: $cl-secondary;
+  }
+
+  &__customer-photo{
+    max-width: 50%;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 5px);
+    background: linear-gradient(146.7deg, #908a8a57 50%, #ffffff45 50%);
+    opacity: 0;
+    transition: .3s;
+  }
+
+  &__icon-b{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s;
+  }
+
+  &__news-photo:hover &__layer{
+    opacity: 1;
+  }
+
+  &__news-photo:hover &__icon-b{
+    opacity: 1;
+  }
+}

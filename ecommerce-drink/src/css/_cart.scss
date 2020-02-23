@@ -1,0 +1,68 @@
+i[class="far fa-trash-alt"] {
+  cursor: pointer;
+  color: red;
+}
+
+
+.cart{
+  &__photo{
+    max-width: 7rem;
+
+    & > img{
+      width: 100%;
+    }
+  }
+
+  & table tbody tr{
+    background-color: #fff;
+  }
+
+  & div ul{
+    width: 50%;
+    margin: auto 0 auto auto;
+
+    & li{
+      font-size: 1.6rem;
+      @include display(row nowrap, center, space-between);
+
+      & span{
+        display: inline-block;
+      }
+    }
+
+    & li:not(:last-child){
+      margin-bottom: 1rem;
+    }
+
+    & li:last-child{
+      padding: 2rem;
+      border: 4px double #e6ae48;
+      font-size: 2.5rem;
+      color: #e6ae48;
+    }
+  }
+  &__b-cart{
+    @extend %mt-2;
+
+    & > table{
+      width: 100%;
+      background: $cl-3rd;
+    }
+  }
+
+  table, tr, td, th{
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-collapse: collapse;
+    @extend %p-1;
+  }
+
+  &__actions{
+    text-align: right;
+    @extend %mt-2;
+
+    & > button{
+      @extend %btn;
+    }
+  }
+}

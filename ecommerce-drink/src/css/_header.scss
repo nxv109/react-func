@@ -1,0 +1,57 @@
+.header {
+  height: 47rem;
+  // background-image: url('../images/slide-1-2050x898.jpg');
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &__title {
+    color: $cl-rd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-65%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    @extend %title;
+
+
+    &>span {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      font-weight: 900;
+    }
+  }
+
+  &__title-n {
+    color: $cl-rd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @extend %title-n;
+    transform: translate(35%, -100%);
+    -webkit-transform: translate(35%, -100%);
+    -moz-transform: translate(35%, -100%);
+    -ms-transform: translate(35%, -100%);
+    -o-transform: translate(35%, -100%);
+}
+
+  &__title-nn {
+    font-family: 'Dancing Script', cursive;
+    color: $cl-rd;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    @extend %title-n;
+    transform: translate(200%, 253%);
+    -webkit-transform: translate(200%, 253%);
+    -moz-transform: translate(200%, 253%);
+    -ms-transform: translate(200%, 253%);
+    -o-transform: translate(200%, 253%);
+}
+}

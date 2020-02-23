@@ -1,0 +1,48 @@
+.productC{
+  @include display(column, flex-start, center);
+
+  &__proC-items{
+    @include display(row, flex-start, space-between);
+  }
+
+  &__photo{
+    flex: 35%;
+
+    & > img{
+      width: 100%;
+    }
+  }
+
+  &__info{
+    flex: 65%;
+
+    & > div:not(:last-child){
+      @extend %mb-2;
+    }
+  }
+
+  &__title{
+    font-size: $h1;
+  }
+
+  &__price{
+    font-size: $h1;
+    color: $cl-bg-primary;
+  }
+
+  &__actions{
+    @include display(row, center, flex-start);
+  }
+
+  &__add-to-cart{
+    @extend %btn;
+  }
+
+  &__add-to-cart, &__like{
+    @extend %mr-2;
+  }
+
+  &__descriptions{
+    color: $cl-primary;
+  }
+}

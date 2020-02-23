@@ -1,0 +1,18 @@
+.about{
+  &__us{
+    @include display(row, flex-start, space-between);
+    @extend %mt-3;
+  }
+
+  &__photo > img{
+    width: 100%;
+  }
+
+  &__photo, &__content{
+    max-width: 48%;
+  }
+
+  &__content > div{
+    @extend %mb-1;
+  } 
+}

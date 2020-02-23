@@ -1,0 +1,14 @@
+.contact{
+  &__ct{
+    @extend %mt-2;
+    @include display(row, flex-start, space-between);
+  }
+
+  &__map, &__address{
+    flex: 1;
+  }
+
+  &__map{
+    @extend %mr-1;
+  }
+}

@@ -1,0 +1,11 @@
+.blog{
+  &__bl{
+    @include display(row, center, center);
+    @extend %mt-3;
+
+    & > .others__news-items{
+      flex: 30%;
+      @extend %mb-2;
+    }
+  }
+}

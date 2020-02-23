@@ -1,0 +1,81 @@
+.navbar {
+  background: #000;
+  position: relative;
+
+  &__nav {
+    &__menu {
+      @include display(row, center, space-between);
+
+      &__items {
+        padding: 2rem;
+        position: relative;
+
+        &:first-child {
+          & a>img {
+            max-width: 10rem;
+          }
+        }
+
+        & a {
+          color: $cl-rd;
+          font-size: 1.5rem;
+
+          &:hover {
+            color: #e5ae42;
+          }
+        }
+      }
+
+      &__items:hover &__second {
+        display: block;
+        position: absolute;
+        top: 5rem;
+        left: -30rem;
+        width: 70rem;
+        @extend %p-1;
+        background: $cl-white;
+        color: $cl-rd;
+        z-index: 1000;
+      }
+
+      &__second {
+        display: none;
+        @extend %bd;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -5px;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          background: linear-gradient(-45deg, #19838600 50%, #e6ae48 50%);
+          z-index: -147;
+        }
+      }
+
+      &__second-b {
+        @include display(row, flex-start, space-between);
+      }
+
+      &__title-second-b-items {
+        @extend %mb-1;
+        color: $cl-secondary;
+      }
+
+      &__second-b-img {
+        max-width: 30%;
+
+        &>img {
+          width: 100%;
+        }
+      }
+
+      &__sc-items a {
+        color: $cl-primary;
+      }
+    }
+  }
+}

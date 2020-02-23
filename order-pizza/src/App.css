@@ -1,0 +1,23 @@
+.box-your-pizza{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box-your-pizza1{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.box-your-pizza > *{
+  display: inline-block;
+}
+
+.box-image{
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}

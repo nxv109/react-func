@@ -1,0 +1,44 @@
+.address{
+  &__ad{
+    @include display(row, flex-start, space-between);
+  }
+
+  &__of-y, &__of-add{
+    width: 49%;
+
+    & input{
+      width: 100%;
+    }
+
+    & form div:not(:last-child){
+      @extend %mb-2;
+    }
+  }
+
+  &__of-y-edit, &__of-add-update{
+    @extend %btn2;
+  }
+
+  &__of-y-delete, &__of-add-exit{
+    @extend %btn;
+  }
+
+  &__of-y-tt, &__of-add-tt{
+    @extend %mb-2;
+    @extend %mt-2;
+  }
+
+  &__cb-default{
+    @include display(row, center, center);
+    flex-flow: row nowrap !important;
+    width: 100%;
+
+    & > input{
+      flex: 3%;
+    }
+
+    & > div{
+      flex: 100%;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.breadcrumb {
+  @extend %pt-3;
+  @extend %pb-3;
+  
+  & > span:last-child {
+    color: $cl-bg-primary;
+  }
+}
