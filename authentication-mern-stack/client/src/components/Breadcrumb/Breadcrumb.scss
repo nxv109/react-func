@@ -1,0 +1,11 @@
+@import '../../style/abstracts/variables';
+
+.breadcrumb {
+	margin-top: .5rem;
+	margin-bottom: 2rem;
+
+	&__route {
+		display: block;
+		font-size: $font_size_large;
+	}
+}

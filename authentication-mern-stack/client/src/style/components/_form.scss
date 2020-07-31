@@ -1,0 +1,22 @@
+.form-group {
+	$input: '.el-input';
+	margin-bottom: 1rem;
+
+	#{$input} {
+		background: $white;		
+		color: $black;
+
+		height: 40px;
+		width: 100%;
+		border: 1px solid $gray_01;
+		border-radius: 5px;
+		padding: 0 .5rem;
+		outline: none;
+
+		font-size: 14px;	
+
+		&:focus{
+			border: 1px solid $primary_02;
+		}
+	}
+}

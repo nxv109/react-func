@@ -1,0 +1,39 @@
+$property-map: (
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left,
+  bdr: border-radius,
+  w: width,
+);
+
+$sizes: 0 4 8 12 16 18 20 24 28 32 48 160;
+$sizes-by-percent: 0 25 33 50 75 100;
+
+@each $key, $property in $property-map {
+  .#{$key}-auto {
+    #{$property}: auto;
+  } 
+
+  @each $size in $sizes {
+    $val: $size + px;
+
+    .#{$key}-#{$size} {
+      #{$property}: $val;
+    }
+  }
+}
+
+@each $size in $sizes-by-percent {
+  $val: percentage($size / 100);
+
+  .w-#{$size}p {
+    width: $val;
+  }
+}

@@ -1,0 +1,6 @@
+const ERROR_CODES = {
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+};
+
+export { ERROR_CODES };

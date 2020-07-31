@@ -1,0 +1,45 @@
+// Colors
+$white: #fff;
+$black: #000;
+$gray_01: #999999;
+$primary_01: #006da0;
+$primary_02: #0897da;
+
+// Borders
+$border_radius_base: 2px;
+$border_radius_small: 4px;
+$border_radius_medium: 6px;
+$border_radius_large: 8px;
+
+// Fonts
+$font_size_smallest: 12px;
+$font_size_small: 14px;
+$font_size_base: 16px;
+$font_size_medium: 18px;
+$font_size_large: 20px;
+
+$font_weight_light: 300;
+$font_weight_base: 400;
+$font_weight_medium: 500;
+$font_weight_bold: 700;
+
+// Typography
+$line_height_base: 1;
+
+// Z-index
+$z_indexes: (
+  base    : 1,
+  under   : -1,
+  sidebar : 1000,
+  dropdown: 100
+);
+
+// Grid breakpoints
+$grid_breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

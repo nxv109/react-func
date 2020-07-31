@@ -1,0 +1,10 @@
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;	
+	max-width: 100%; // khi nào chiều rộng màn hình mà nhỏ hơn width thì max-width sẽ được kích hoạt
+}
+
+.d-none{
+	display: none;
+}

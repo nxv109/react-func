@@ -1,0 +1,24 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item-full {
+    flex: 1;
+  }
+
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--align-start {
+    align-items: flex-start;
+  }
+
+  &--justify-between {
+    justify-content: space-between;
+  }
+}

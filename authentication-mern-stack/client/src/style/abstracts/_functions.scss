@@ -1,0 +1,10 @@
+// breakpoint
+@function breakPoint($name) {
+	@if (map-has-key($grid_breakpoints, $name)) {
+		@return map-get($grid_breakpoints, $name);	
+	}
+
+	@warn 'There is no item "#{$name}" in this list; choose one of: #{$grid_breakpoints}';
+
+  @return null;
+}
