@@ -1,0 +1,27 @@
+.App {
+  padding: 24px;
+}
+
+.item {
+  border: 1px solid gray;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: orange;
+  color: #fff;
+  padding: 15px 24px;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:not(:last-child) {
+  margin-right: 15px;
+}
